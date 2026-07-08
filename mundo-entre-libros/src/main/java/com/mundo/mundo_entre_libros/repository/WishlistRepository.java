@@ -1,0 +1,12 @@
+package com.mundo.mundo_entre_libros.repository;
+
+import com.mundo.mundo_entre_libros.model.Wishlist;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface WishlistRepository extends JpaRepository<Wishlist, Integer> {
+
+    Optional<Wishlist> findByUser_IdUser(Integer idUser);
+
+}
